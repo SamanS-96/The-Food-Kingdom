@@ -8,8 +8,9 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -20,6 +21,9 @@
         </div>
     </header>
 
+    <div>
+
+    </div>
     <div style="display: flex;">
         <div class="col-6 content meal_show">
             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
@@ -32,13 +36,18 @@
                 <path d="M11 12h10" />
             </svg>
             <label id="meal_name" for="meal_name">Italian Pasta</label><br>
-            <label id="meal_extra" for="meal_extra">With Special Sauce</label><br>
-            <label id="meal_description" for="meal_description">Italian pasta with special sauce is a flavar you can
-                find
-                only in The Meal Master</label><br>
+            <label id="meal_category" for="meal_category">Pasta</label>
+            <label id="meal_area" for="meal_area">- Sri Lanka</label><br>
+            <label id="meal_tags" for="meal_tags"></label><br>
         </div>
-        <div class="col-2 m-5">
-            <a href=""><img src="assets/img/menu_logo.jpg" alt="menu_navigation" style="width: 250px;"></a>
+        <div data-aos="fade-down" data-aos-duration="3000">
+            <a href=""><img src="assets/img/menu_navIcon.png" alt="menu_navigation" style="width: 250px;" class="nav-icon col-2"></a>
+        </div>
+        <div class="icon_bar col-4 m-5" data-aos="flip-up" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+            <img src="assets/img/icon_01.png" alt="">
+            <img src="assets/img/icon_02.png" alt="">
+            <img src="assets/img/icon_04.png" alt="">
+            <img src="assets/img/icon_03.png" alt="">
         </div>
 
     </div>
@@ -46,8 +55,13 @@
     <div style="display: flex;">
         <div class="col-7 m-5">
             <div class="card shadow-sm thick-border">
-                <img src="assets/img/italian_pasta.jpg" alt="meal_image" style="height: 700px;">
+                <img src="assets/img/italian_pasta.jpg" alt="meal_image" style="height: 700px;" id="meal_img">
             </div>
+        </div>
+        <div class="col-4 m-5">
+            <label style="font-family: cursive; font-size: 30px; color: aqua;"><u>Instructions :</u></label>
+
+            <div class="instruction-box" id="meal_ins"></div>
         </div>
 
     </div>
@@ -56,7 +70,6 @@
         <div class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top m-5">
             
             <p>© 2025 ~ The Meal Master ~  Inc. All rights reserved.</p>
-            <img src="assets/img/icon_01.png" alt="footer_icon" style="width: 100px;">
         </div>
     </footer>
 
@@ -66,8 +79,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script src="assets/js/"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

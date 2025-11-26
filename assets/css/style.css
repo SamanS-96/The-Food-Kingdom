@@ -33,14 +33,23 @@ header img{
     font-size: 50px;
     font-weight: bold;
 }
-#meal_extra{
+#meal_category{
     font-size: 40px;
     font-style: italic;
 }
-#meal_description{
+#meal_area{
+    font-size: 40px;
+    font-style: italic;
+}
+#meal_tags{
     font-family: cursive;
     font-size: 30px;
     color: deepskyblue;
+}
+#meal_ins{
+    font-family: cursive;
+    color:deepskyblue;
+    font-size: 25px;
 }
 
 footer{
@@ -50,6 +59,46 @@ footer{
 }
 
 .thick-border {
-    border: 20px solid rgb(253, 252, 245); /* thickness + color */
+    border: 10px solid deepskyblue; /* thickness + color */
     border-radius: 10px;    /* optional */
+}
+
+.instruction-box {
+    padding: 15px;
+    border: 2px solid aqua;      /* outline the box */
+    border-radius: 10px;
+    background: rgba(90, 62, 35, 0.719); /* transparent background */
+    font-size: 18px;
+    font-family: cursive;
+
+    height: 675px;         /* FIXED HEIGHT */
+    overflow-y: auto;      /* ENABLE SCROLL */
+}
+
+.icon_bar img{
+    width: 140px;
+}
+
+.nav-icon {
+    width: 250px;
+    transition: transform 0.3s ease; /* smooth animation */
+}
+
+.nav-icon:hover {
+    transform: scale(1.2); /* zoom 20% */
+}
+
+.animate {
+    animation: slideIn 0.8s ease;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
