@@ -14,3 +14,42 @@ body {
     color: white; /* adjust text color */
     padding: 20px;
 }
+
+header img{
+    width: 150px;
+}
+
+.gravitas-one-regular {
+  font-family: "Gravitas One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.meal_show{
+    margin-top: 3%;
+    margin-left: 2%;
+}
+#meal_name{
+    font-size: 50px;
+    font-weight: bold;
+}
+#meal_extra{
+    font-size: 40px;
+    font-style: italic;
+}
+#meal_description{
+    font-family: cursive;
+    font-size: 30px;
+    color: deepskyblue;
+}
+
+footer{
+    color: deepskyblue;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.thick-border {
+    border: 20px solid rgb(253, 252, 245); /* thickness + color */
+    border-radius: 10px;    /* optional */
+}
