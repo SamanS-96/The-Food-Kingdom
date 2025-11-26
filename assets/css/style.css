@@ -1,7 +1,16 @@
-body {
+.homePage_body {
     margin: 0;
     padding: 0;
     background-image: url("/assets/img/wall_paper.jpg"); /* your wallpaper */
+    background-size: cover;      /* make it full screen */
+    background-position: center; /* center the image */
+    background-attachment: fixed; /* optional: parallax effect */
+    background-repeat: no-repeat;
+}
+.menuPage_body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/assets/img/menu-wall_paper.jpg"); /* your wallpaper */
     background-size: cover;      /* make it full screen */
     background-position: center; /* center the image */
     background-attachment: fixed; /* optional: parallax effect */
@@ -76,7 +85,7 @@ footer{
 }
 
 .icon_bar img{
-    width: 140px;
+    width: 150px;
 }
 
 .nav-icon {
