@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/assets/img/wall_paper.jpg"); /* your wallpaper */
+    background-size: cover;      /* make it full screen */
+    background-position: center; /* center the image */
+    background-attachment: fixed; /* optional: parallax effect */
+    background-repeat: no-repeat;
+}
+
+.content {
+    position: relative; /* ensures content stays on top */
+    z-index: 1;
+    color: white; /* adjust text color */
+    padding: 20px;
+}
