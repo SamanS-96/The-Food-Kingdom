@@ -52,7 +52,7 @@ header img{
 }
 #meal_tags{
     font-family: cursive;
-    font-size: 30px;
+    font-size: 35px;
     color: deepskyblue;
 }
 #meal_ins{
@@ -74,13 +74,37 @@ footer{
 
 .instruction-box {
     padding: 15px;
-    border: 2px solid aqua;      /* outline the box */
+    border: 3px solid deepskyblue;      /* outline the box */
     border-radius: 10px;
     background: rgba(90, 62, 35, 0.719); /* transparent background */
     font-size: 18px;
     font-family: cursive;
 
     height: 675px;         /* FIXED HEIGHT */
+    overflow-y: auto;      /* ENABLE SCROLL */
+}
+
+.Info-box{
+    padding: 15px;
+    border: 5px solid deepskyblue;      /* outline the box */
+    border-radius: 10px;
+    background: rgba(90, 62, 35, 0.719); /* transparent background */
+    font-size: 18px;
+    font-family: cursive;
+
+    height: 618px;         /* FIXED HEIGHT */
+    overflow-y: auto;      /* ENABLE SCROLL */
+}
+
+.filter-box{
+    padding: 15px;
+    border: 5px solid deepskyblue;      /* outline the box */
+    border-radius: 10px;
+    background: rgba(82, 69, 57, 0.719); /* transparent background */
+    font-size: 18px;
+    font-family: cursive;
+
+    height: 795px;         /* FIXED HEIGHT */
     overflow-y: auto;      /* ENABLE SCROLL */
 }
 
@@ -110,4 +134,40 @@ footer{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.menu_filterBar{
+    display: flex;
+    margin-left: 50px;
+}
+.menu_filterBar input{
+    height: 60px;
+    width: 20%;
+    background-color: rgb(44, 23, 7);
+    color: aliceblue;
+    font-family: cursive;
+    font-size: 40px;
+    border: 2px solid rgb(243, 247, 247);
+    border-radius: 10px;
+}
+.menu_filterBar select{
+    margin-left: 30px;
+    height: 50px;
+    width: 20%;
+    background-color: rgb(77, 38, 9);
+    color: aliceblue;
+    font-family: cursive;
+    font-size: 30px;
+    border: 2px solid rgb(249, 252, 252);
+    border-radius: 5px;
+}
+.menu_filterBar button{
+    height: 60px;
+    width: 200px;
+    background-color: black;
+    color: deepskyblue;
+    font-family: cursive;
+    font-size: 35px;
+    border: 2px solid deepskyblue;
+    border-radius: 10px;
 }

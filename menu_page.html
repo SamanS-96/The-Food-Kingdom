@@ -12,13 +12,108 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="menuPage_body">
-    <header class="content">
-        <div style="display: flex; align-items: center; gap: 5%;">
-            <img src="assets/img/logo.png" alt="">
-            <h1 style="font-size: 100px; font-family:cursive; color: deepskyblue;">The Meal Master</h1>
-            <a href="index.html" style="font-size: 35px; color: aliceblue; margin-left: 900px;">Home</a>
+    <header class="content border-bottom">
+        <div style="display: flex; align-items: center;">
+            <div style="display: flex; width: 85%; gap: 5%;">
+                <img src="assets/img/logo.png" alt="">
+                <h1 style="font-size: 100px; font-family:cursive; color: deepskyblue;">The Meal Master</h1>
+            </div>
+            <div style="width: 10%; display: flex; justify-content: end;">
+                <a href="index.html" style="font-size: 35px; color: aliceblue; ">Home</a>
+            </div>
+            
+            
         </div>
     </header>
+
+    <div class="menu_mainDiv">
+        
+        <div class="menu_filterBar mt-3" style="width: 100%;">
+            <div style="width: 40%; display: flex; justify-content: space-between;">
+                <input type="text" placeholder="Search by Name" style="width: 500px;">
+                <button style="height: 80px; width: 250px; font-weight: bold; background-color: rgb(129, 60, 6);">Discover Meal</button>
+            </div>
+            <div style="display: flex; width: 60%; justify-content: flex-start; margin-left: 0px;">
+            
+                <select class="col-1">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+
+                <select class="col-1">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+
+                <select  class="col-1">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            
+                <button  class="col-1" style="margin-left: 150px;">Filter</button>
+            </div>
+        </div>
+
+        <div style="display: flex; width: 100%;">
+            <div style="width: 40%; margin: 50px;">
+                <div class="col-6 content meal_show ms-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-arrow-down-narrow-wide-icon lucide-arrow-down-narrow-wide">
+                        <path d="m3 16 4 4 4-4" />
+                        <path d="M7 20V4" />
+                        <path d="M11 4h4" />
+                        <path d="M11 8h7" />
+                        <path d="M11 12h10" />
+                    </svg>
+                    <label id="meal_name" for="meal_name">Italian Pasta</label><br>
+                    <label for="" style="font-size: 30px; font-family: cursive;">Category -</label><label id="meal_category" for="meal_category">Pasta</label><br>
+                    <label for="" style="font-size: 30px; font-family: cursive;">Area -</label><label id="meal_area" for="meal_area">Sri Lanka</label><br>
+                    <label for="" style="font-size: 30px; font-family: cursive;  color: deepskyblue;">Tags -</label><label id="meal_tags" for="meal_tags">Bake</label><br>
+                </div>
+                <div>
+                    <div class="card shadow-sm thick-border">
+                        <img src="assets/img/italian_pasta.jpg" alt="meal_image" style="height: 455px;" id="meal_img">
+                    </div>
+                </div>
+            </div>
+            <div style="width: 60%; margin: 50px;">
+                <div class="filter-box">
+                    /////
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 100%; display: flex;">
+            <div style="width: 45%; margin: 50px;">
+                <div class="card shadow-sm thick-border">
+                    <iframe 
+                        id="meal_video"
+                        width="100%"
+                        height="600"
+                        src="https://www.youtube.com/embed/8U1tKWKDeWA"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div style="width: 55%; margin: 50px;">
+                <div class="Info-box">
+                    <label style="font-family: cursive; font-size: 30px; color: aqua;"><u>Ingredients :</u></label><br>
+                    <label for="">/////////////////////////</label><br>
+
+                    <label style="font-family: cursive; font-size: 30px; color: aqua;"><u>Instructions :</u></label><br>
+                    <label for="">/////////////////////////</label><br>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <footer>
         <div class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top m-5">
