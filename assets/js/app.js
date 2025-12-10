@@ -46,7 +46,7 @@ loadRandomMeal();
 setInterval(loadRandomMeal, 20000);
 
 
-
+//-----------------------------------------------------------------
 //--Menu Page Functions----------------------------------
 
 let input=document.getElementById("search_meal");
@@ -69,6 +69,19 @@ async function searchMeal(mealInput) {
     setMealDetails(data);
 }
 
+
+let btnDiscover=document.getElementById("discover_meal");
+btnDiscover.addEventListener("click",e=>{
+    discoverMeal();
+});
+
+async function discoverMeal() {
+    let res=await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`);
+    let data=await res.json();
+    setMealDetails(data);
+}
+
+
 function setMealDetails(data){
     let name=document.getElementById("name");
     let category=document.getElementById("category");
@@ -89,7 +102,7 @@ function setMealDetails(data){
     //********update data------------***************************************
     name.innerText = data.meals[0].strMeal;
     category.innerText = data.meals[0].strCategory;
-    area.innerText = "- " + data.meals[0].strArea;
+    area.innerText = data.meals[0].strArea;
     tags.innerText = data.meals[0].strTags;
 
     img.src = data.meals[0].strMealThumb;
@@ -121,7 +134,6 @@ function setMealDetails(data){
     elements.forEach(el => {
         el.classList.add("animate");
     });
-
 }
 
 
