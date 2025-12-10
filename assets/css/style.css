@@ -80,7 +80,7 @@ footer{
     font-size: 18px;
     font-family: cursive;
 
-    height: 675px;         /* FIXED HEIGHT */
+    height: 625px;         /* FIXED HEIGHT */
     overflow-y: auto;      /* ENABLE SCROLL */
 }
 
@@ -104,12 +104,16 @@ footer{
     padding: 15px;
     border: 5px solid deepskyblue;      /* outline the box */
     border-radius: 10px;
-    background: rgba(82, 69, 57, 0.719); /* transparent background */
+    background: rgba(53, 49, 46, 0.719); /* transparent background */
     font-size: 18px;
     font-family: cursive;
 
     height: 795px;         /* FIXED HEIGHT */
     overflow-y: auto;      /* ENABLE SCROLL */
+
+    font-family: cursive;
+    color:deepskyblue;
+    font-size: 25px;
 }
 
 .icon_bar img{

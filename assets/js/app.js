@@ -137,4 +137,61 @@ function setMealDetails(data){
 }
 
 
+//Filter Section-------------------------------------------------------
+
+window.onload = function () {
+    loadCategories();
+    loadAreas();
+    loadIngredients();
+};
+
+async function loadCategories() {
+    let res = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
+    let data = await res.json();
+
+    let select = document.getElementById("categorySelect");
+
+    select.innerHTML = ""; // clear previous options
+
+    data.meals.forEach(item => {
+        let option = document.createElement("option");
+        option.value = item.strCategory;
+        option.textContent = item.strCategory;
+        select.appendChild(option);
+    });
+}
+
+async function loadAreas() {
+    let res = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
+    let data = await res.json();
+
+    let select = document.getElementById("areaSelect");
+
+    select.innerHTML = ""; // clear previous options
+
+    data.meals.forEach(item => {
+        let option = document.createElement("option");
+        option.value = item.strArea;
+        option.textContent = item.strArea;
+        select.appendChild(option);
+    });
+}
+
+async function loadIngredients() {
+    let res = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?i=list");
+    let data = await res.json();
+
+    let select = document.getElementById("ingredientSelect");
+
+    select.innerHTML = ""; // clear previous options
+
+    data.meals.forEach(item => {
+        let option = document.createElement("option");
+        option.value = item.strIngredient;
+        option.textContent = item.strIngredient;
+        select.appendChild(option);
+    });
+}
+
+
 
