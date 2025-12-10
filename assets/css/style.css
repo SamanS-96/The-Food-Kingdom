@@ -136,13 +136,9 @@ footer{
     }
 }
 
-.menu_filterBar{
-    display: flex;
-    margin-left: 50px;
-}
 .menu_filterBar input{
     height: 60px;
-    width: 20%;
+    width: 10%;
     background-color: rgb(44, 23, 7);
     color: aliceblue;
     font-family: cursive;
@@ -153,7 +149,7 @@ footer{
 .menu_filterBar select{
     margin-left: 30px;
     height: 50px;
-    width: 20%;
+    width: 270px;
     background-color: rgb(77, 38, 9);
     color: aliceblue;
     font-family: cursive;
@@ -161,6 +157,14 @@ footer{
     border: 2px solid rgb(249, 252, 252);
     border-radius: 5px;
 }
+.menu_filterBar label{
+    margin-left: 30px;
+    width: 270px;
+    color: aliceblue;
+    font-family: cursive;
+    font-size: 25px;
+}
+
 .menu_filterBar button{
     height: 60px;
     width: 200px;
@@ -170,4 +174,30 @@ footer{
     font-size: 35px;
     border: 2px solid deepskyblue;
     border-radius: 10px;
+}
+
+
+@media (max-width: 1730px) {
+    .filter-panel {
+        flex-direction: column !important;
+        width: 100% !important;
+        margin: 20px 0 !important;
+        gap: 20px;
+    }
+
+    .filter-panel div {
+        width: 100% !important;
+    }
+
+    .filter-panel select {
+        width: 100% !important;
+        padding: 10px;
+    }
+
+    .filter-panel button {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding: 15px;
+        font-size: 18px;
+    }
 }
