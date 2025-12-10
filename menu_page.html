@@ -35,31 +35,24 @@
             </div>
             <div class="filter-panel" style="display: flex; width: 60%; margin: 50px; margin-left: 0px;">
                 <div>
-                    <label for="">Category</label><br>
-                    <select id="categorySelect">
-                        <!-- <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option> -->
+                    <label style="font-size: 35px;"  for="">Filter By</label><br>
+                    <select id="option_select" style="width: 400px; height: 55px; color: rgb(126, 202, 228);">
+                        <option value="">Select Option</option>
+                        <option value="Category">Category</option>
+                        <option value="Area">Area</option>
+                        <option value="Main Ingredient">Main Ingredient</option>
                     </select>
                 </div>
-                <div>
-                    <label for="">Area</label><br>
-                    <select id="areaSelect">
-                        <!-- <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option> -->
-                    </select>
-                </div>
-                <div>
-                    <label for="">Main Ingredient</label><br>
-                    <select id="ingredientSelect">
+                <div style="margin-left: 30%;">
+                    <label id="lbl_option" for=""></label><br>
+                    <select id="option_filter" style="width: 350px; color: deepskyblue;">
                         <!-- <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
                         <option value="3">Option 3</option> -->
                     </select>
                 </div>
             
-                <button style="margin-left: 25%">Filter</button>
+                <button id="btn_filter" style="margin-left: 2%">Filter</button>
             </div>
         </div>
 
@@ -87,8 +80,10 @@
                 </div>
             </div>
             <div style="width: 60%; margin: 50px; margin-top: 10px;">
-                <div class="filter-box">
-                    /////
+                <div id="filterResults" >
+                    <p style="text-align: center; margin: 200px; font-family: monospace; font-size: 100px; color: aquamarine; font-weight: bold;" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">Wellcome To Food Kingdom....</p>
                 </div>
             </div>
         </div>

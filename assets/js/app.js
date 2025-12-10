@@ -91,7 +91,7 @@ function setMealDetails(data){
     let lbl_instructions=document.getElementById("lbl_instructions");
 
     // elements that should animate
-    const elements = [name, category, area, tags, img, meal_video, lbl_ingredients, lbl_instructions];
+    const elements = [name, category, area, tags, img, meal_video, lbl_ingredients, lbl_instructions,];
 
     // Remove old animation & retrigger
     elements.forEach(el => {
@@ -139,19 +139,35 @@ function setMealDetails(data){
 
 //Filter Section-------------------------------------------------------
 
-window.onload = function () {
-    loadCategories();
-    loadAreas();
-    loadIngredients();
-};
+let selectedOp = document.getElementById("option_select");
+let DisplayOp = document.getElementById("lbl_option");
+
+selectedOp.addEventListener("change", e => {
+    const value = e.target.value; // or selectedOp.value
+
+    if (value === "Category") {
+        DisplayOp.innerText = "Filter by Category";
+        loadCategories();
+    } else if (value === "Area") {
+        DisplayOp.innerText = "Filter by Area";
+        loadAreas();
+    } else if (value === "Main Ingredient") {
+        DisplayOp.innerText = "Filter by Ingredient";
+        loadIngredients();
+    } else {
+        DisplayOp.innerText = "";
+        option_filter.innerHTML = "";
+    }
+});
+
 
 async function loadCategories() {
     let res = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
     let data = await res.json();
 
-    let select = document.getElementById("categorySelect");
+    let select = document.getElementById("option_filter");
 
-    select.innerHTML = ""; // clear previous options
+    select.innerHTML = `<option value="">--Select Category--</option>`; // clear previous options
 
     data.meals.forEach(item => {
         let option = document.createElement("option");
@@ -165,9 +181,9 @@ async function loadAreas() {
     let res = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
     let data = await res.json();
 
-    let select = document.getElementById("areaSelect");
+    let select = document.getElementById("option_filter");
 
-    select.innerHTML = ""; // clear previous options
+    select.innerHTML = `<option value="">--Select Area--</option>`; // clear previous options
 
     data.meals.forEach(item => {
         let option = document.createElement("option");
@@ -181,9 +197,9 @@ async function loadIngredients() {
     let res = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?i=list");
     let data = await res.json();
 
-    let select = document.getElementById("ingredientSelect");
+    let select = document.getElementById("option_filter");
 
-    select.innerHTML = ""; // clear previous options
+    select.innerHTML = `<option value="">--Select Ingredient--</option>`; // clear previous options
 
     data.meals.forEach(item => {
         let option = document.createElement("option");
@@ -192,6 +208,84 @@ async function loadIngredients() {
         select.appendChild(option);
     });
 }
+
+//Filter Meals--------------------------------------------
+
+window.onload = function () {
+    document.getElementById("option_select").value = "";
+};
+
+document.getElementById("btn_filter").addEventListener("click", () => {
+    
+    let type = document.getElementById("option_select").value;
+    let filterValue = document.getElementById("option_filter").value;
+
+    if (!type || !filterValue) {
+        alert("Please select both filter options!");
+        return;
+    }
+
+    filterMeals(type, filterValue);
+    
+});
+
+async function filterMeals(type, value) {
+    // elements that should animate
+    const elements = [filterResults];
+
+    // Remove old animation & retrigger
+    elements.forEach(el => {
+        el.classList.remove("animate");
+        void el.offsetWidth; // restart animation trick
+    });
+
+
+    let url = "";
+
+    if (type === "Category") {
+        url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${value}`;
+    }
+    else if (type === "Area") {
+        url = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${value}`;
+    }
+    else if (type === "Main Ingredient") {
+        url = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${value}`;
+    }
+
+    let res = await fetch(url);
+    let data = await res.json();
+
+    let container = document.getElementById("filterResults");
+    container.innerHTML = ""; // clear previous
+
+    if (!data.meals) {
+        container.innerHTML = "<p>No meals found.</p>";
+        return;
+    }
+
+    data.meals.forEach(meal => {
+        let div = document.createElement("div");
+        div.classList.add("meal-item");
+
+        div.innerHTML = `
+            <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+            <span>${meal.strMeal}</span>
+        `;
+
+        // Click → show details
+        div.addEventListener("click", () => {
+            searchMeal(meal.strMeal);
+        });
+
+        container.appendChild(div);
+    });
+
+    // Add animation again
+    elements.forEach(el => {
+        el.classList.add("animate");
+    });
+}
+
 
 
 
