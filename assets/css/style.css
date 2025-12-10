@@ -88,12 +88,16 @@ footer{
     padding: 15px;
     border: 5px solid deepskyblue;      /* outline the box */
     border-radius: 10px;
-    background: rgba(90, 62, 35, 0.719); /* transparent background */
+    background: rgba(110, 65, 23, 0.719); /* transparent background */
     font-size: 18px;
     font-family: cursive;
 
     height: 618px;         /* FIXED HEIGHT */
     overflow-y: auto;      /* ENABLE SCROLL */
+
+    font-family: cursive;
+    color:deepskyblue;
+    font-size: 25px;
 }
 
 .filter-box{
@@ -201,3 +205,22 @@ footer{
         font-size: 18px;
     }
 }
+
+#name{
+    font-size: 50px;
+    font-weight: bold;
+}
+#category{
+    font-size: 40px;
+    font-style: italic;
+}
+#area{
+    font-size: 40px;
+    font-style: italic;
+}
+#tags{
+    font-family: cursive;
+    font-size: 25px;
+    color: deepskyblue;
+}
+
