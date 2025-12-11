@@ -17,7 +17,7 @@
     <header class="content">
         <div style="display: flex; align-items: center; gap: 5%;">
             <img src="assets/img/logo.png" alt="">
-            <h1 style="font-size: 100px; font-family:cursive; color: deepskyblue;">The Food Kingdom</h1>
+            <h1 style="font-size: 350%; font-family:cursive; color: deepskyblue;">The Food Kingdom</h1>
         </div>
     </header>
 
@@ -41,7 +41,7 @@
             <label id="meal_tags" for="meal_tags"></label><br>
         </div>
         <div data-aos="fade-down" data-aos-duration="3000">
-            <a href="menu_page.html"><img src="assets/img/menu_navIcon.png" alt="menu_navigation" style="width: 180px;" class="nav-icon col-1"></a>
+            <a href="menu_page.html"><img src="assets/img/menu_navIcon.png" alt="menu_navigation" style="width: 105px;" class="nav-icon col-1"></a>
         </div>
         <div class="icon_bar col-4" data-aos="flip-up" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
             <img src="assets/img/icon_01.png" alt="">
@@ -55,13 +55,22 @@
     <div style="display: flex;">
         <div class="col-5 ms-5 me-5">
             <div class="card shadow-sm thick-border">
-                <img src="assets/img/italian_pasta.jpg" alt="meal_image" style="height: 650px;" id="meal_img">
+                <img src="assets/img/italian_pasta.jpg" alt="meal_image" style="height: 320px;" id="meal_img">
             </div>
         </div>
         <div class="col-6 me-5">
-            <label style="font-family: cursive; font-size: 30px; color: aqua;"><u>Instructions :</u></label>
+            <label style="font-family: cursive; font-size: 15px; color: aqua;"><u>Instructions :</u></label>
 
-            <div class="instruction-box" id="meal_ins"></div>
+            <!-- <div class="instruction-box" id="meal_ins"></div> -->
+
+            <div class="instruction-box">
+                <img src="assets/img/wall_paper.jpg" class="instruction-bg-img">
+                <div class="instruction-inner_box">
+                    <div class="instruction-text"  id="meal_ins">
+                        /////////////
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

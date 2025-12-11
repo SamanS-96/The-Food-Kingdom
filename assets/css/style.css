@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     /* background-image: url("/assets/img/wall_paper.jpg"); your wallpaper */
-    background-color:rgb(44, 33, 25);
+    background-color:rgb(26, 21, 17);
     background-size: cover;      /* make it full screen */
     background-position: center; /* center the image */
     background-attachment: fixed; /* optional: parallax effect */
@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     /* background-image: url("/assets/img/menu-wall_paper.jpg"); your wallpaper */
-    background-color:rgb(44, 33, 25);
+    background-color:rgb(26, 21, 17);
     background-size: cover;      /* make it full screen */
     background-position: center; /* center the image */
     background-attachment: fixed; /* optional: parallax effect */
@@ -27,7 +27,7 @@
 }
 
 header img{
-    width: 150px;
+    width: 7%;
 }
 
 .gravitas-one-regular {
@@ -41,85 +41,140 @@ header img{
     margin-left: 2%;
 }
 #meal_name{
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
 }
 #meal_category{
-    font-size: 40px;
+    font-size: 20px;
     font-style: italic;
 }
 #meal_area{
-    font-size: 40px;
+    font-size: 20px;
     font-style: italic;
 }
 #meal_tags{
     font-family: cursive;
-    font-size: 35px;
+    font-size: 15px;
     color: deepskyblue;
-}
-#meal_ins{
-    font-family: cursive;
-    color:deepskyblue;
-    font-size: 25px;
 }
 
 footer{
     color: deepskyblue;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .thick-border {
-    border: 10px solid deepskyblue; /* thickness + color */
+    border: 5px solid deepskyblue; /* thickness + color */
     border-radius: 10px;    /* optional */
 }
 
-.instruction-box {
-    padding: 15px;
-    border: 3px solid deepskyblue;      /* outline the box */
-    border-radius: 10px;
-    background: rgba(90, 62, 35, 0.719); /* transparent background */
-    font-size: 18px;
-    font-family: cursive;
 
-    height: 625px;         /* FIXED HEIGHT */
-    overflow-y: auto;      /* ENABLE SCROLL */
+.instruction-box {
+    position: relative;
+    padding: 15px;
+    border: 3px solid deepskyblue;
+    border-radius: 10px;
+    height: 306px;
+    margin-right: 30px;
+}
+
+.instruction-inner_box {
+    position: relative;
+    border-radius: 10px;
+    background: rgba(129, 96, 71, 0.719);
+    height: 270px;
+    overflow-y: auto;
+}
+
+/* The image behind the text */
+.instruction-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Make it fill the box */
+    border-radius: 10px;
+    z-index: 1;            /* behind the text */
+    opacity: 0.3;          /* adjust transparency */
+}
+
+/* Text on top */
+.instruction-text {
+    position: relative;
+    z-index: 2;            /* above the image */
+    color:deepskyblue;
+    font-size: 14px;
+    font-family: cursive;
 }
 
 .Info-box{
     padding: 15px;
     border: 5px solid deepskyblue;      /* outline the box */
     border-radius: 10px;
-    background: rgba(110, 65, 23, 0.719); /* transparent background */
-    font-size: 18px;
-    font-family: cursive;
-
-    height: 618px;         /* FIXED HEIGHT */
-    overflow-y: auto;      /* ENABLE SCROLL */
-
-    font-family: cursive;
-    color:deepskyblue;
-    font-size: 25px;
-}
-
-#filterResults{
-    padding: 15px;
-    border: 5px solid deepskyblue;      /* outline the box */
-    border-radius: 10px;
     background: rgba(39, 36, 34, 0.719); /* transparent background */
-    font-size: 18px;
-    font-family: cursive;
-
-    height: 795px;         /* FIXED HEIGHT */
+    height: 361px;         /* FIXED HEIGHT */
     overflow-y: auto;      /* ENABLE SCROLL */
 
     font-family: cursive;
     color:deepskyblue;
-    font-size: 25px;
+    font-size: 14px;
 }
 
+.filter-box {
+    position: relative;
+    padding: 15px;
+    border: 3px solid deepskyblue;
+    border-radius: 10px;
+    height: 535px;
+}
+
+.filter-inner_box {
+    position: relative;
+    border-radius: 10px;
+    background: rgba(12, 10, 9, 0.719);
+    height: 500px;
+    font-family: cursive;
+    color:deepskyblue;
+    font-size: 25px;
+    overflow-y: auto;
+}
+
+/* The image behind the text */
+.filter-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Make it fill the box */
+    border-radius: 10px;
+    z-index: 1;            /* behind the text */
+    opacity: 0.6;          /* adjust transparency */
+}
+
+/* Text on top */
+.filter-text {
+    position: relative;
+    z-index: 2;            /* above the image */
+    color:deepskyblue;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.icon_bar{
+    display: flex;
+    gap: 40px;
+    padding: 15px;
+    background: rgb(129, 108, 86);
+    border-radius: 20px;
+    height: 105px; 
+    margin-right: 52px;
+    
+}
 .icon_bar img{
-    width: 150px;
+    width: 18%;
 }
 
 .nav-icon {
@@ -147,47 +202,56 @@ footer{
 }
 
 .menu_filterBar input{
-    height: 60px;
-    width: 10%;
+    height: 35px;
+    width: 250px;
     background-color: rgb(44, 23, 7);
     color: aliceblue;
     font-family: cursive;
-    font-size: 40px;
     border: 2px solid rgb(243, 247, 247);
-    border-radius: 10px;
+    border-radius: 5px;
 }
-.menu_filterBar select{
+#option_select{
     margin-left: 30px;
-    height: 50px;
-    width: 270px;
+    height: 30px;
+    width: 180px;
     background-color: rgb(77, 38, 9);
-    color: aliceblue;
+    color: rgb(126, 202, 228);
     font-family: cursive;
-    font-size: 30px;
+    font-size: 15px;
+    border: 2px solid rgb(249, 252, 252);
+    border-radius: 5px;
+}
+#option_filter{
+    margin-left: 30px;
+    height: 30px;
+    width: 150px;
+    background-color: rgb(77, 38, 9);
+    color: deepskyblue;
+    font-family: cursive;
+    font-size: 15px;
     border: 2px solid rgb(249, 252, 252);
     border-radius: 5px;
 }
 .menu_filterBar label{
     margin-left: 30px;
-    width: 270px;
     color: aliceblue;
     font-family: cursive;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .menu_filterBar button{
-    height: 90px;
-    width: 200px;
+    height: 45px;
+    width: 120px;
     background-color: black;
     color: deepskyblue;
     font-family: cursive;
-    font-size: 35px;
+    font-size: 22px;
     border: 2px solid deepskyblue;
     border-radius: 10px;
 }
 
 
-@media (max-width: 2000px) {
+@media (max-width: 576px) {
     .filter-panel {
         flex-direction: column !important;
         width: 100% !important;
@@ -211,44 +275,67 @@ footer{
         font-size: 18px;
     }
 }
+@media (max-width: 576px) {
+    .search-panel {
+        flex-direction: column !important;
+        width: 100% !important;
+        margin: 20px 0 !important;
+        gap: 20px;
+    }
+
+    .search-panel div {
+        width: 100% !important;
+    }
+
+    .search-panel button {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding: 15px;
+        font-size: 18px;
+    }
+}
 
 #name{
-    font-size: 50px;
+    font-size: 25px;
     font-weight: bold;
+    width: 500px;
 }
 #category{
-    font-size: 40px;
+    font-size: 20px;
     font-style: italic;
 }
 #area{
-    font-size: 40px;
+    font-size: 20px;
     font-style: italic;
 }
 #tags{
     font-family: cursive;
-    font-size: 25px;
+    font-size: 15px;
     color: deepskyblue;
 }
 
 .meal-item {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
     padding: 8px;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .meal-item img {
-    width: 200px;
-    height: 120px;
+    width: 80px;
+    height: 60px;
     border-radius: 8px;
     object-fit: cover;
 }
 
 .meal-item span {
-    font-size: 35px;
+    font-size: 18px;
     font-weight: 500;
 }
+
+
+

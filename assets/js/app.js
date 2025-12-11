@@ -80,6 +80,8 @@ async function discoverMeal() {
     let data=await res.json();
     setMealDetails(data);
 }
+// initial load
+discoverMeal();
 
 
 function setMealDetails(data){
@@ -146,13 +148,13 @@ selectedOp.addEventListener("change", e => {
     const value = e.target.value; // or selectedOp.value
 
     if (value === "Category") {
-        DisplayOp.innerText = "Filter by Category";
+        DisplayOp.innerText = "Please Select Category ! ---------->";
         loadCategories();
     } else if (value === "Area") {
-        DisplayOp.innerText = "Filter by Area";
+        DisplayOp.innerText = "Please Select Area ! ---------->";
         loadAreas();
     } else if (value === "Main Ingredient") {
-        DisplayOp.innerText = "Filter by Ingredient";
+        DisplayOp.innerText = "Please Select Ingredient ! ---------->";
         loadIngredients();
     } else {
         DisplayOp.innerText = "";
