@@ -1,7 +1,8 @@
 .homePage_body {
     margin: 0;
     padding: 0;
-    background-image: url("/assets/img/wall_paper.jpg"); /* your wallpaper */
+    /* background-image: url("/assets/img/wall_paper.jpg"); your wallpaper */
+    background-color:rgb(44, 33, 25);
     background-size: cover;      /* make it full screen */
     background-position: center; /* center the image */
     background-attachment: fixed; /* optional: parallax effect */
@@ -10,7 +11,8 @@
 .menuPage_body {
     margin: 0;
     padding: 0;
-    background-image: url("/assets/img/menu-wall_paper.jpg"); /* your wallpaper */
+    /* background-image: url("/assets/img/menu-wall_paper.jpg"); your wallpaper */
+    background-color:rgb(44, 33, 25);
     background-size: cover;      /* make it full screen */
     background-position: center; /* center the image */
     background-attachment: fixed; /* optional: parallax effect */
